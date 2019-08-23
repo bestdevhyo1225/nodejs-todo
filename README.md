@@ -1,22 +1,93 @@
-# Chatting Service (Console Version)
+# [Step 8-2 Mission] 기획서 및 설계도
 
 <br>
 
-## :pencil2: 요약
+## :pencil2: 1. 프로젝트 명
 
-* Node.js의 net 모듈(TCP)을 사용해서 채팅 서비스를 구현했다.
-
-* Socket을 이해하기 위해서 시작했지만, 더 공부해야할 필요가 있다.
-
-* 로그인 기능을 추가 했고, crypto 모듈을 사용해서 비밀번호를 암호화 했다.
-
-* .csv 파일 시스템으로 Database를 구현했다.
+* TCP 소켓 모듈을 이용한 실시간 채팅 서비스
 
 <br>
 
-## :pencil2: 프로그램 구조
+## :pencil2: 2. 기획 의도
 
-![image-20190824001853270](https://github.com/bestdevhyo1225/image_repository/blob/master/image-20190824001853270.png?raw=true)
+* Slack, KakaoTalk 대표적인 회사를 비롯하여 실시간 채팅서비스는 어떻게 동작되는걸까? 궁금증이 생겨서 채팅 서비스 프로그램을 만들게 되었습니다.
 
+<br>
 
+## :pencil2: 3. 구현 기능
 
+* 로그인 기능
+
+* 회원가입 기능
+
+* 사용자가 채팅할 수 있는 공간을 만드는 기능
+
+* 옵션) 사용자가 채팅 내용을 파일 형태로 저장하는 기능
+
+<br>
+
+## :pencil2: 4. 요구 사항
+
+* 데이터 베이스를 사용하지 않는다.
+
+* 'http' 모듈을 사용하지 않는다.
+
+<br>
+
+## :pencil2: 5. Use Case 다이어 그램
+![image-20190531165212354](https://github.com/bestdevhyo1225/image_repository/blob/master/image-20190531165212354.png?raw=true)
+
+<br>
+
+## :pencil2: 6. 실제 프로그램 흐름도
+![image-20190612171301426](https://github.com/bestdevhyo1225/image_repository/blob/master/image-20190612171301426.png?raw=true)
+
+<br>
+
+## :pencil2: 7. 구현 모듈
+
+### :page_with_curl: app.js
+
+* 사용자 인터페이스 모듈이다.
+
+* 로그인, 회원 가입, 채팅하기 목록이 존재한다.
+
+### :page_with_curl: chat_client.js
+
+* 채팅을 관리하는 client 모듈이다.
+
+* 서버에게 데이터를 송수신 한다.
+
+### :page_with_curl: chat_server.js
+
+* 채팅을 관리하는 server 모듈이다.
+
+* 클라이언트에게 데이터를 송수신 한다.
+
+### :page_with_curl: file_manager.js
+
+* 회원 정보를 관리하는 server와 file 사이에서 데이터를 전달하는 모듈이다.
+
+* 회원 가입 기능 (존재하는 ID 체크)
+
+* 회원 가입 경우, PW를 암호화 하는 기능
+
+* 로그인 기능 (ID 와 PW 확인)
+
+### :page_with_curl: member_client.js
+
+* 회원 정보를 관리하는 client 모듈이다.
+
+* 회원 가입이 가능한지를 판단하는 기능
+
+* 존재하는 회원이 로그인 했는지 체크하는 기능
+
+### :page_with_curl: member_server.js
+
+* 회원 정보를 관리하는 server 모듈이다.
+
+* 회원 정보와 관련된 데이터를 송수신 한다.
+
+### :page_with_curl: utility.js
+
+* 사용자 입력을 위한 모듈
