@@ -1,4 +1,4 @@
-# [Step 8-2 Mission] 기획서 및 설계도
+# Chatting Service (Console Version) 기획서 및 설계도
 
 <br>
 
