@@ -91,3 +91,35 @@
 ### :page_with_curl: utility.js
 
 * 사용자 입력을 위한 모듈
+
+<br>
+
+## :pencil2: 실행 화면
+
+### :memo: Server Socket 실행
+
+![gif1](https://github.com/bestdevhyo1225/image_repository/blob/master/2019-08-25%2015-26-22.2019-08-25%2015_30_26.gif?raw=true)
+
+<br>
+
+### :memo: 사용자 회원 가입
+
+![gif2](https://github.com/bestdevhyo1225/image_repository/blob/master/2019-08-25%2015-54-29.2019-08-25%2015_55_40.gif?raw=true)
+
+<br>
+
+### :memo: 사용자 로그인
+
+![gif3](https://github.com/bestdevhyo1225/image_repository/blob/master/2019-08-25%2015-59-06.2019-08-25%2015_59_47.gif?raw=true)
+
+<br>
+
+### :memo: 사용자 로그아웃 & 프로그램 종료
+
+![gif4](https://github.com/bestdevhyo1225/image_repository/blob/master/2019-08-25%2016-03-18.2019-08-25%2016_04_12.gif?raw=true)
+
+<br>
+
+### :memo: 사용자 채팅
+
+![gif5](https://github.com/bestdevhyo1225/image_repository/blob/master/2019-08-25%2016-12-03.2019-08-25%2016_14_48.gif?raw=true)
